@@ -4,15 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/uikit.min.css" />
-    <script src="libs/qimessaging/1.0/qimessaging.js"></script>
-    <script src="libs/qimessaging/1.0/jquery.min.js"></script>
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
-    <script src="js/control.js"></script>
     <script>
         function connect(){
-            var naoIp = $("#naoIP").val();
-            // alert( 'http://' + naoIp + '/apps/nao_destruction_program/' )
+            var input = document.getElementById('naoIP');
+            var naoIp = input.getAttribute('value');
             window.open('http://' + naoIp + '/apps/nao_destruction_program/?ip=' + naoIp, '_blank');
         }
     </script>
@@ -23,9 +20,6 @@
         <div class="uk-margin-top uk-margin-bottom">
             <h4 class="uk-heading-line uk-text-right"><span>NAOによるディストラクションプログラム</span></h4>
         </div>
-        <!-- <div class="uk-margin-bottom"><label>　　　</label></div> -->
-
-        
         <div id="toggle-animation-multiple-1" class="uk-child-width-1-1@m uk-grid-small uk-margin-bottom" uk-grid>
             <div>
                 <div class="uk-card uk-card-default uk-card-body uk-card-hover">
