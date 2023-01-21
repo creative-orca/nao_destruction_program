@@ -9,7 +9,7 @@
     <script>
         function connect(){
             var input = document.getElementById('naoIP');
-            var naoIp = input.getAttribute('value');
+            var naoIp = input.value;
             window.open('http://' + naoIp + '/apps/nao_destruction_program/?ip=' + naoIp, '_blank');
         }
     </script>
